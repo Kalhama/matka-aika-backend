@@ -1,0 +1,13 @@
+{
+    "name": "production",
+    "type": "postgres",
+    "host": "localhost",
+    "port": 5432,
+    "username": "metropaccess-visualiser",
+    "password": "metropaccess-visualiser",
+    "database": "metropaccess-visualiser",
+    "entities": ["build/entity/*.js"],
+    "migrations": ["migrations/*.js"],
+    "synchronize": false,
+    "logging": ["schema", "error"]
+}
