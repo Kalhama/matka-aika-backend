@@ -7,7 +7,7 @@
   "preferGlobal": true,
   "scripts": {
     "start": "NODE_ENV=development LOGGING=true ts-node-dev --respawn --ignore-watch node_modules",
-    "build": "tsc -p .",
+    "build": "rm -rf build/ && tsc -p .",
     "reload": "yarn install --prod && yarn migration:run -c production && pm2 reload ecosystem.config.js --update-env --env production && pm2 save",
     "deploy": "sh ./scripts/deploy.sh",
     "lint": "eslint --ext .ts src/",

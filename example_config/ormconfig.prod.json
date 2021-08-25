@@ -8,6 +8,9 @@
     "database": "metropaccess-visualiser",
     "entities": ["build/entity/*.js"],
     "migrations": ["migrations/*.js"],
+    "cli": {
+        "migrationsDir": "src/migrations"
+    },
     "synchronize": false,
     "logging": ["schema", "error"]
 }

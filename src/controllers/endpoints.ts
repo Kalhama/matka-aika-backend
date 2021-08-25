@@ -60,7 +60,7 @@ export class Endpoints {
     @Get('/YKRGrid')
     public async getYKRGrid(): Promise<unknown> {
         // TODO use async await
-        var data = fs.readFileSync('data/MetropAccess_YKR_grid.zip');
+        var data = fs.readFileSync('YKRGrid.zip');
 
         return shp.parseZip(data)
     }
