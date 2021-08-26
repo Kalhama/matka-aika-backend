@@ -12,6 +12,10 @@ Datan/menetelmien kuvaus: Toivonen, T., M. Salonen, H. Tenkanen, P. Saarsalmi, T
 
 Datan DOI-tunniste: Tenkanen, H., J.L. Espinosa, E. Willberg, V. Heikinheimo, A. Tarnanen, T. Jaakkola, J. Järvi, M. Salonen, T. Toivonen (2018). Helsinki Region Travel Time Matrix 2018. DOI: 10.13140/RG.2.2.20858.39362
 
-—————————————————————————————————– LISENSSI —————————————————————————————————– Pääkaupunkiseudun-Matka-aikamatriisi, jonka tekijä on MetropAccess-hanke / Accessibility Research Group (Helsingin Yliopisto) on lisensoitu Creative Commons Nimeä 4.0 Kansainvälinen -lisenssillä. Lisätietoa lisenssistä: http://creativecommons.org/licenses/by/4.0/deed.fi
+—————————————————————————————————–
+LISENSSI
+—————————————————————————————————–
+Pääkaupunkiseudun-Matka-aikamatriisi, jonka tekijä on MetropAccess-hanke / Accessibility Research Group (Helsingin Yliopisto) on lisensoitu Creative Commons Nimeä 4.0 Kansainvälinen -lisenssillä. Lisätietoa lisenssistä: http://creativecommons.org/licenses/by/4.0/deed.fi
 
-Mikäli aineiston pohjalta laaditaan tieteellisiä julkaisuja, toivomme, että tekijät olisivat yhteydessä hankkeen johtajaan.
+
+Visualisaation ohjelmistolähdekoodi, jonka tekijä on Max Kalhama on lisensoitu Creative Commons Nimeä 4.0 Kansainvälinen -lisenssillä

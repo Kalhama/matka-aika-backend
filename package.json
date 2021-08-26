@@ -1,9 +1,8 @@
 {
   "name": "metropaccess-visualiser",
-  "private": true,
   "version": "0.0.1",
   "main": "build/app.js",
-  "license": "UNLICENSED",
+  "license": "CC-BY-4.0",
   "preferGlobal": true,
   "scripts": {
     "start": "NODE_ENV=development LOGGING=true ts-node-dev --respawn --ignore-watch node_modules",
