@@ -1,17 +1,8 @@
 // import { DateTime } from 'luxon'
-import {
-    Get,
-    JsonController,
-    QueryParam,
-    Param,
-    BadRequestError,
-    InternalServerError,
-    ContentType
-} from 'routing-controllers'
+import { Get, JsonController, QueryParam, BadRequestError, InternalServerError, ContentType } from 'routing-controllers'
 import { getConnection } from 'typeorm'
 import * as fs from 'fs'
 import * as shp from 'shpjs'
-
 
 @JsonController()
 export class Endpoints {
@@ -29,11 +20,38 @@ export class Endpoints {
 
     @Get('/travelTimes')
     public async getCandles(
-        @QueryParam('from') from: object,
-        @QueryParam('to') to: object,
+        @QueryParam('from') from: number,
+        @QueryParam('to') to: number,
+        @QueryParam('excludeCols') excludeCols: string[]
     ): Promise<unknown> {
+        const cols = [
+            'fromID',
+            'toID',
+            'walkTime',
+            'walkDistance',
+            'bikeSlowTime',
+            'bikeFastTime',
+            'bikeDistance',
+            'publicTransportRushhourWaitingHome',
+            'publicTransportRushhourTime',
+            'publicTransportRushhourDistance',
+            'publicTransportMiddayWaitingHome',
+            'publicTransportMiddayTime',
+            'publicTransportMiddayDistance',
+            'carRushhourTime',
+            'carRushhourDistance',
+            'carMiddayTime',
+            'carMiddayDistance',
+            'carSpeedLimitTime',
+            'year'
+        ]
+
+        if (!excludeCols) excludeCols = []
+
+        const selectCols = cols.filter((el) => excludeCols.indexOf(el) < 0)
+
         const conn = getConnection(process.env.NODE_ENV)
-        
+
         if ((from && to) || (!from && !to)) {
             throw new Error('One and only one from to and from parameters must be defined')
         }
@@ -42,7 +60,7 @@ export class Endpoints {
 
         const ret = await conn.query(
             `
-            SELECT *
+            SELECT ${selectCols.map((col) => `"${col}"`).join(', ')}
             FROM "travel_time_matrix"
             WHERE "${from ? 'fromID' : 'toID'}" = $1
             LIMIT 15000
@@ -60,7 +78,7 @@ export class Endpoints {
     @Get('/YKRGrid')
     public async getYKRGrid(): Promise<unknown> {
         // TODO use async await
-        var data = fs.readFileSync('YKRGrid.zip');
+        const data = fs.readFileSync('YKRGrid.zip')
 
         return shp.parseZip(data)
     }
