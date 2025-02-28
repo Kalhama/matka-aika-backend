@@ -74,7 +74,7 @@ app.get('/travelTime', async (req: Request, res: Response) => {
     // Construct the file path
     // Extract the first 4 digits of the ID and add 'xxx'
     const idPrefix = id.substring(0, 4) + 'xxx'
-    const filePath = path.join('TravelTimeMatrix', idPrefix, `travel_times_to_ ${id}.txt`)
+    const filePath = path.join('data', 'TravelTimeMatrix', idPrefix, `travel_times_to_ ${id}.txt`)
 
     // Check if file exists
     if (!fs.existsSync(filePath)) {
@@ -107,7 +107,7 @@ app.get('/travelTime', async (req: Request, res: Response) => {
 app.get('/YKRgrid', async (req: Request, res: Response) => {
   try {
     res.append('Cache-Control', 'public; max-age=31536000')
-    const data = await readFile('YKRGrid.zip')
+    const data = await readFile('data/YKRGrid.zip')
     const geojson = await shp(data)
     res.status(200).json(geojson)
   } catch (error) {
