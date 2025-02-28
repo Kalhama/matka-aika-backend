@@ -1,10 +1,20 @@
-# Yleistä #
+## Yleistä
 
 Visualisoi pääkaupunkiseudun ajallista saavutettavuutta julkisella liikenteellä. Sivusto käyttää Digital Geography Labin saavutettavuus- ja liikkumistutkimuskeskuksen keräämää dataa.
 
-Sivuston tarkoituksena on palvella suljetun mapple.fi-palvelun korvaajana.
+## Hosting
+1. Lataa YKRGrid ja matka-aika-aineisto projektin juureen
+```
+wget -O YKRGrid.zip https://zenodo.org/record/3247564/files/MetropAccess_YKR_grid.zip?download=1
+wget -O 2018.zip https://zenodo.org/record/3247564/files/HelsinkiRegion_TravelTimeMatrix2018.zip?download=1
+```
 
-# Viitteet #
+2. Pura 2018.zip ja nimeä purettu kansio `TravelTimeMatrix`
+
+> [!NOTE]  
+> Purettu matka-aika-aineisto vie noin 15-20 GB tallennustilaa
+
+## Viitteet
 
 https://blogs.helsinki.fi/saavutettavuus/
 

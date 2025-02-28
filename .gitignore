@@ -1,7 +1,4 @@
 node_modules/
 build/
-ormconfig.json
-tunnel-db.sh
-data/
-yarn-error.log
 YKRGrid.zip
+TravelTimeMatrix
