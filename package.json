@@ -1,5 +1,5 @@
 {
-  "name": "metropaccess-visualiser",
+  "name": "matka-aika-backend",
   "version": "0.0.1",
   "main": "build/app.js",
   "license": "CC-BY-4.0",
@@ -18,7 +18,7 @@
     "zod": "^3.24.2"
   },
   "author": "Max Kalhama <max@kalhama.fi>",
-  "repository": "git@github.com:Kalhama/metropaccess-backend.git",
+  "repository": "git@github.com:Kalhama/matka-aika-backend.git",
   "files": [
     "build"
   ],
